@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #070b14;
+    --bg-card: #0d1527;
+    --border-color: rgba(56, 189, 248, 0.15);
+  }
+
+  body {
+    background-color: #070b14;
+    color: #f1f5f9;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* Custom scientific instrument scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0b1120;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #38bdf8;
+  }
+}
+
+/* Glassmorphism & instrument glowing effects */
+.lab-card {
+  background: rgba(13, 21, 39, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  border-radius: 0.75rem;
+}
+
+.lab-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.lab-card-hover:hover {
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 0 20px -5px rgba(56, 189, 248, 0.15);
+  transform: translateY(-2px);
+}
+
+.glow-blue {
+  box-shadow: 0 0 25px -5px rgba(14, 165, 233, 0.3);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.3);
+}
+
+.glow-violet {
+  box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.3);
+}
+
+.font-mono-num {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
